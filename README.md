@@ -13,7 +13,7 @@ _..._
 
 ### Exemple
 
-_Voir [test.js](https://github.com/JWhile/Bloknot/blob/master/test.js)_
+_Voir [exemple/](https://github.com/JWhile/Bloknot/tree/master/exemple)_
 
 ### Références
 
