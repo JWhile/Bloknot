@@ -160,7 +160,7 @@ FileHand.prototype.open = function(target)
             if(self.gzip)
             {
                 target.header['Content-Encoding'] = 'gzip';
-                target.header['Content-Length'] = Buffer.byteLength(file.gzip);
+                target.header['Content-Length'] = file.gziped.length;
 
                 target.send(file.gziped);
             }
@@ -283,7 +283,7 @@ function HttpServeur(host, port)
         setTimeout(function(){ self.stop(); self.start(); }, 1000);
     });
 }
-// function start():void
+// function start():@Chainable
 HttpServeur.prototype.start = function()
 {
     this._http.listen(this.port, this.host);
@@ -292,7 +292,7 @@ HttpServeur.prototype.start = function()
 
     return this;
 };
-// function stop():void
+// function stop():@Chainable
 HttpServeur.prototype.stop = function()
 {
     this.started = false;
@@ -306,7 +306,7 @@ HttpServeur.prototype.add = function(options)
 {
     var hand = null;
 
-    var valid = ((typeof options.path === 'string' || options.path instanceof RegExp) && typeof options.type === 'string');
+    var valid = ((typeof options.path === 'string' || options.path instanceof RegExp || options.default) && typeof options.type === 'string');
 
     if(valid && typeof options.func === 'function')
     {

@@ -13,15 +13,11 @@ _..._
 
 ### Exemple
 
-```js
-// Voir test.js
-```
-
-Créer un serveur HTTP qui écoute `127.0.0.1:80` et défini des routes.
+_Voir [test.js](https://github.com/JWhile/Bloknot/blob/master/test.js)_
 
 ### Références
 
-_Wiki..._
+_[Wiki](https://github.com/JWhile/Bloknot/wiki)_
 
 ### License
 

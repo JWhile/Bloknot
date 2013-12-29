@@ -1,0 +1,20 @@
+body{
+    font-family:Arial,sans-serif;
+}
+#logo{
+    margin:150px 0 0 150px;
+    padding:0 85px;
+    background:url('logo.jpeg') 0 0 no-repeat;
+    line-height:64px;
+    font-size:28px;
+}
+a{
+    text-decoration:none;
+    color:#27C;
+}
+a:hover{
+    color:#14A;
+}
+p{
+    margin:20px 0 0 100px;
+}

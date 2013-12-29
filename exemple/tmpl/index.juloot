@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title><?title?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <div id="logo">
+        <a href="<?githubLink?>"><?githubLink?></a>
+    </div>
+    <p>Ceci est un exemple construit avec <a href="<?githubRepo?>">Bloknot</a>.</p>
+</body>
+</html>
