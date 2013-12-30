@@ -17,7 +17,7 @@ _Voir [exemple/](https://github.com/JWhile/Bloknot/tree/master/exemple)_
 
 ### Références
 
-_[Wiki](https://github.com/JWhile/Bloknot/wiki)_
+Tout est dans le [Wiki](https://github.com/JWhile/Bloknot/wiki).
 
 ### License
 

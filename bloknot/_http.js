@@ -202,37 +202,6 @@ FuncHand.prototype.open = function(target)
 };
 
 /**
- * class TmplHand(String|RegExp reg, String type, String file, boolean sess)
- */
-function TmplHand(reg, type, file, sess)
-{
-    this.reg  = reg;  // :String|RegExp
-    this.file = file; // :function
-
-    this.type = type; // :String
-    this.sess = sess; // :boolean
-}
-// function match(String path):boolean
-TmplHand.prototype.match = function(path)
-{
-    return (this.reg instanceof RegExp)? this.reg.test(path) : (path === this.reg);
-};
-// function open(Target target):void
-TmplHand.prototype.open = function(target)
-{
-    var file = cache.get(this.file, 'utf8');
-
-    file.load(function()
-    {
-        var data = util.juloot(file.content, ((target._session !== null)? target.session : {}));
-
-        target.header['Content-Length'] = Buffer.byteLength(data);
-
-        target.send(data);
-    });
-};
-
-/**
  * class HttpServeur(String host, int port)
  */
 function HttpServeur(host, port)
@@ -311,10 +280,6 @@ HttpServeur.prototype.add = function(options)
     if(valid && typeof options.func === 'function')
     {
         hand = new FuncHand(options.path, options.type, options.func, !!options.session);
-    }
-    else if(valid && typeof options.tmpl === 'string')
-    {
-        hand = new TmplHand(options.path, options.type, options.tmpl, !!options.session);
     }
     else if(valid && typeof options.file === 'string')
     {
