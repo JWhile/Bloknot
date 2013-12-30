@@ -16,11 +16,10 @@ var util = require('./_util');
 var commandes = []; // :Array<Commande>
 var program = null; // :Commande
 
-function Commande(name, hand, args, info, isProgram)
+function Commande(name, hand, info, isProgram)
 {
     this.name = name; // :String
     this.hand = hand; // :function
-    this.args = args; // :String
     this.info = info; // :String
     this.isProgram = isProgram; // :boolean
 }
@@ -48,9 +47,9 @@ Commande.prototype.test = function(name, args)
 /**
  * function add(String name, function hand, String info = '', boolean isProgram = false):@Chainable
  */
-var add = function(name, hand, args, info, isProgram)
+var add = function(name, hand, info, isProgram)
 {
-    commandes.push(new Commande(name, hand, args, info || '', !!isProgram));
+    commandes.push(new Commande(name, hand, info || '', !!isProgram));
 
     return exports;
 };
@@ -191,7 +190,7 @@ add('eval', function(cmd)
         error(e);
     }
 
-}, '', 'Eval Mode', true);
+}, 'Eval Mode', true);
 
 add('colors', function(args)
 {
@@ -205,7 +204,7 @@ add('colors', function(args)
         log('    §'+ c[i] +'#'+ c[i] + a, true);
     }
 
-}, '(test)', 'Liste des couleurs', false);
+}, 'Liste des couleurs', false);
 
 add('help', function(args)
 {
@@ -215,10 +214,10 @@ add('help', function(args)
     {
         c = commandes[i];
 
-        log('    - '+ (c.isProgram? '[Program] ' : '[Command] ') + c.name + ((!!c.args)? ' '+ c.args : '') +' :: '+ c.info);
+        log('    - '+ (c.isProgram? '[Program] ' : '[Command] ') + c.name +' :: '+ c.info);
     }
 
-}, '', 'Affiche ce message', false);
+}, 'Affiche ce message', false);
 
 add('mem', function(args)
 {
@@ -274,14 +273,14 @@ add('mem', function(args)
     log('Alouée: §8'+ util.getSize(mem.heapTotal, 'B') +'§r / '+ util.getSize(mem.rss, 'B') +' ('+ util.getSize(mem.heapTotal / mem.rss * 100, '%') +')', true);
     log('Utilisée: §2'+ util.getSize(mem.heapUsed, 'B') +'§r / §8'+ util.getSize(mem.heapTotal, 'B') +'§r ('+ util.getSize(mem.heapUsed / mem.heapTotal * 100, '%') +')', true);
 
-}, '', 'Affiche la mémoire utilisée/libre', false);
+}, 'Affiche la mémoire utilisée/libre', false);
 
 // Exports
 exports.add     = add;
-exports.inspect = inspect;
 exports.execute = execute;
 
 exports.log     = log;
+exports.inspect = inspect;
 
 exports.info    = info;
 exports.debug   = debug;
