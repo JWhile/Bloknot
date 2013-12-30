@@ -107,6 +107,8 @@ File.prototype.load = function(callback)
     {
         fs.readFile(this.name, {encoding: this.encoding}, readCallback);
     }
+
+    return this;
 };
 
 /**
