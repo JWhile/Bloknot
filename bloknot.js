@@ -11,10 +11,6 @@ var console = require('./bloknot/_console');
 
 
 // Exports
-exports.t = function(filename, data)
-{
-    return util.juloot(cache.get(filename, 'utf8').getContent(), data);
-};
 exports.http = function(host, port)
 {
     return new http.Serveur(host, port);

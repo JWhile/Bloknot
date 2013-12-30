@@ -7,10 +7,15 @@ bloknot.http('127.0.0.1', 80)
         'type': 'text/html',
         'func': function(target)
         {
-            return bloknot.t('tmpl/index.juloot', {
-                'githubLink': 'https://github.com/JWhile',
-                'githubRepo': 'https://github.com/JWhile/Bloknot',
-                'title': 'Exemple - Bloknot'
+            var file = bloknot.getFile('tmpl/index.juloot', 'utf8');
+
+            file.load(function()
+            {
+                target.send(bloknot.util.juloot(file.content, {
+                    'githubLink': 'https://github.com/JWhile',
+                    'githubRepo': 'https://github.com/JWhile/Bloknot',
+                    'title': 'Exemple - Bloknot'
+                }))
             });
         }
     })
