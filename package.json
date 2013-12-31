@@ -1,0 +1,17 @@
+{
+    "name": "bloknot",
+    "description": "Tout ce qu'il faut pour Nodejs !",
+    "author": "Juloo <juloo.dsi@gmail.com> (https://github.com/JWhile)",
+
+    "version": "0.1.0",
+
+    "main": "bloknot",
+
+    "repository": "git://github.com/JWhile/Bloknot",
+    "homepage": "https://github.com/JWhile/Bloknot",
+    "bugs": {
+        "url": "https://github.com/JWhile/Bloknot/issues"
+    },
+
+    "license": "MIT"
+}

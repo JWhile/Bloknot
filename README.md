@@ -5,17 +5,25 @@ Cache de fichier (async/sync, md5, gzip),
 Console (couleurs, commandes, programmes),
 Utiles (template, parseur...).
 
-Toute ce qu'il faut.
+Toute ce qu'il faut pour Nodejs.
 
 ### Get it!
 
-_..._
+Bloknot est dans [npm](https://npmjs.org/package/bloknot).
+
+```
+$ npm install bloknot
+```
+
+```js
+var bloknot = require('bloknot');
+```
 
 ### Exemple
 
-_Voir [exemple/](https://github.com/JWhile/Bloknot/tree/master/exemple)_
+Voir [exemple/](https://github.com/JWhile/Bloknot/tree/master/exemple).
 
-### Références
+### Wiki
 
 Tout est dans le [Wiki](https://github.com/JWhile/Bloknot/wiki).
 
