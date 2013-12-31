@@ -166,7 +166,7 @@ FileHand.prototype.open = function(target)
             }
             else
             {
-                target.header['Content-Length'] = Buffer.byteLength(file.content);
+                target.header['Content-Length'] = (typeof file.content === 'string')? Buffer.byteLength(file.content) : file.content.length;
 
                 target.send(file.content);
             }
