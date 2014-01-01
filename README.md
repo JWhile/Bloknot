@@ -1,6 +1,6 @@
-# Bloknot
+# Bloknot _v0.1.1_
 
-Serveur HTTP (routes, gzip, sessions, cookies, données POST),
+Serveur HTTP (routes, gzip, sessions, cookies, données POST, log détaillées),
 Cache de fichier (async/sync, md5, gzip),
 Console (couleurs, commandes, programmes),
 Utiles (template, parseur...).

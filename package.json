@@ -1,6 +1,7 @@
 {
     "name": "bloknot",
     "description": "Tout ce qu'il faut pour Nodejs !",
+    "keywords": ["http", "server", "cache", "console", "color", "utils", "routes", "cookies", "gzip", "post", "log", "async", "template", "terminal", "commande", "web"],
     "author": "Juloo <juloo.dsi@gmail.com> (https://github.com/JWhile)",
 
     "version": "0.1.1",
